@@ -1,0 +1,21 @@
+{
+    "name": "chinapostm/simple-http",
+    "description": "A simple PHP framework",
+    "type": "library",
+    "require": {
+        "php": "^8.0.2"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "chinapostm",
+            "email": "chinapostm@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "SimpleApi\\Http\\": "src/"
+        }
+    }
+}
