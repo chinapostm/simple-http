@@ -8,7 +8,7 @@ abstract class Controller
      * 调用请求方法前执行事件
      * @return bool
      */
-    public function onRequest(?string $action): bool
+    public function onRequest(?string $action, ?string $path): bool
     {
         return true;
     }

@@ -1,6 +1,6 @@
 {
     "name": "chinapostm/simple-http",
-    "description": "A simple PHP framework",
+    "description": "A simple PHP API framework",
     "type": "library",
     "require": {
         "php": "^8.0.2"
