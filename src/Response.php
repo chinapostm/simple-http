@@ -28,7 +28,7 @@ class Response
     {
         self::setHeader();
         http_response_code($status);
-        echo json_encode(['code' => $code, 'status' => $status, 'msg' => $msg]);
+        echo json_encode(['code' => $code, 'msg' => $msg]);
     }
 
     /**
