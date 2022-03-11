@@ -7,7 +7,7 @@ class Response
     /**
      * 响应正确的API
      * @param array|string|null $data
-     * @param int $status
+     * @param int $code
      * @param string $msg
      * @return Response
      */
@@ -20,14 +20,13 @@ class Response
     /**
      * 响应错误的API
      * @param string $msg
-     * @param int $status
-     * @param string|null  $code
+     * @param int $code
      * @return Response
      */
-    public static function fail(string $msg, int $code = null, int $status = 400)
+    public static function fail(string $msg, int $code = null)
     {
         self::setHeader();
-        http_response_code($status);
+        http_response_code($code);
         echo json_encode(['code' => $code, 'msg' => $msg]);
     }
 
