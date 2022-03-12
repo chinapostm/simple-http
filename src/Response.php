@@ -21,12 +21,13 @@ class Response
      * 响应错误的API
      * @param string $msg
      * @param int $code
+     * @param int $state
      * @return Response
      */
-    public static function fail(string $msg, int $code = null)
+    public static function fail(string $msg, int $code = null, int $state = 400)
     {
         self::setHeader();
-        http_response_code($code);
+        http_response_code($state);
         echo json_encode(['code' => $code, 'msg' => $msg]);
     }
 
