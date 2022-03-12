@@ -96,7 +96,7 @@ class Status
     // RFC6585
     const CODE_NETWORK_AUTHENTICATION_REQUIRED = 511;
 
-    private static $msg = [
+    public static $enums = [
         100 => 'Continue',
         101 => 'SwitchingProtocols',
         //RFC2518
@@ -185,8 +185,8 @@ class Status
 
     static function getMsg(int $code): ?string
     {
-        if (isset(self::$msg[$code])) {
-            return self::$msg[$code];
+        if (isset(self::$enums[$code])) {
+            return self::$enums[$code];
         } else {
             return null;
         }
