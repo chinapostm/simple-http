@@ -27,7 +27,7 @@ class Response
     {
         self::setHeader();
         http_response_code(isset(Message\Status::$enums[$code]) ? $code : 400);
-        echo json_encode(['code' => $code, 'msg' => $msg]);
+        echo json_encode(['error_code' => $code, 'error_msg' => $msg]);
     }
 
     /**
