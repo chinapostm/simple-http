@@ -14,7 +14,7 @@ class Response
     public static function respond($data = [], int $code = 200, string $msg = 'success')
     {
         self::setHeader();
-        echo json_encode(['code' => $code, 'data' => $data, 'msg' => $msg]);
+        echo json_encode(['code' => $code, 'result' => $data, 'msg' => $msg]);
     }
 
     /**
